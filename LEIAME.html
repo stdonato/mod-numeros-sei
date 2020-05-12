@@ -1,0 +1,43 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Instalação</title>
+</head>
+
+<body>
+
+<h3> - Instalar Módulo </h3>
+
+No arquivo "config/ConfiguracaoSEI.php", adicione o módulo: <br>
+
+'Modulos' => array( 'MdNumerosIntegracao' => 'mod-numeros-sei' ), <br><p>
+
+
+<h3> - Configuração no SIP </h3> 
+
+Para adicionar o item de Menu, acesse o SIP e realize a seguinte configuração: <br><p>
+
+<h4> 1 - Recursos - Novo </h4>
+<b>Nome:</b> sei_numeros <br>
+<b>Caminho:</b> controlador.php?acao=sei_numeros&qtde=5 <br>
+(a quantidade de itens na tela inicial pode ser ajustada alterando o valor "5" para o valor desejado) <br><p><p>
+
+<img src="screenshots/1_novo_recurso.png" alt=""><p>
+
+<h4> 2 - Menus - Montar - Novo Item </h4>
+<b>Item Menu Superior:</b> Selecione Estatísticas <br>
+<b>Recurso:</b> Selecione sei_numeros <br>
+<b>Rótulo:</b> SEI em Números <br>
+<b>Sequência:</b> 40 <br><p>
+
+<img src="screenshots/2_novo_item.png" alt=""><p>
+
+<h4> 3 - Perfis - Montar </h4>
+Selecione o Órgão, Sistema e Perfil <br>
+Em Recurso digite <b>sei_numeros</b> e clique em <b>Pesquisar</b><br>
+Marques a caixas de seleção em <b>Perfil</b> e <b>Menu</b> <br><p>
+
+<img src="screenshots/3_montar_perfil.png" alt=""><p>
+
+</body>
+</html> 
