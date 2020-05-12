@@ -1,0 +1,37 @@
+
+#infosei { 
+	padding: 5px 0px 5px 0px; 
+	margin-bottom: 20px; 
+	margin-right:5px; 
+	width: 19%; 
+	float: left; 
+	text-align: center; 
+	border: 2px solid #cecece;"
+}
+
+#graficos {
+	display: inline;
+}
+
+/*@media (min-width: 0px) and (max-width: 300px) {*/
+@media (max-width: 700px) {
+/*  #pie2 { display: none; }  */
+  #acessos { display: none; }  
+  #pie,#pie1, #pie2 { width: 95% !important; }
+  #pie {float: left;}
+  #infosei { width: 17%; }
+}
+
+@media (max-width: 1025px) {
+/*  #pie2 { display: none; }  */
+  #acessos { display: none; }  
+  #pie,#pie1, #pie2 { width: 95% !important; }
+  #pie {float: left;}
+  #infosei { width: 17%; }
+}
+
+@media print {
+	.no-print { display: none; visibility: hidden; }
+	#graficoMes, #processosMes { display: none; visibility: hidden; }
+	#procData, #acessosData { width: 500px;}
+}
