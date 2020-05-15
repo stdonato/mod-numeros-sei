@@ -256,11 +256,11 @@ echo "<p>\n";
 </div>
 
 <div id="processos_mes" style="floatx: left;  margin-bottom: 10px; margin-top: 40px;">
-	<div id="processosMes" style="width: 90%; height: 400px"></div>
+	<div id="processosMes" style="width: 100%; height: 400px"></div>
 </div>
 
 <div id="acessos_mes" style="widthx: 96%; floatx: left; margin-bottom: 10px; margin-top: 40px;">
-	<div id="acessosData" style="width: 90%; height: 400px" ></div>
+	<div id="acessosData" style="width: 100%; height: 400px" ></div>
 </div>
 
 <script type="text/javascript" >
@@ -691,11 +691,8 @@ chart: {
  Highcharts.chart('acessosData', {
  	
 chart: {
-       type: 'areaspline'
-		 //height: 450,
-       //plotBorderColor: '#ffffff',
-   	// plotBorderWidth: 0 
-      }, 	
+       type: 'areaspline' 
+}, 	
 
  title: {
      text: 'Acessos por Meses'

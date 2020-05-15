@@ -663,8 +663,8 @@ private static function bolArrFindItem($arrNeedle, $strHaystack){
     public function obterAcessosUsuariosMes($ultimadata = null) {
     	    	  
         if ($ultimadata == null) {
-            //$ultimadata = "1900-01-01";
-            $ultimadata = date('Y-m-d', strtotime('-365 days'));
+            $ultimadata = "1900-01-01";
+            //$ultimadata = date('Y-m-d', strtotime('-365 days'));
         }
         $sgbd = $this->obterTipoSGBD();
         $query = '';
@@ -875,7 +875,7 @@ function gerarTabela($ind, $captionTabela, $larg, $th1, $th2, $linkTodos = null,
           $strResultado .=  "</tr>";
        } 
     if($linkTodos != null) { 
-      $strResultado .=  "<tr style='background:#e5e5e5;'><td>";
+      $strResultado .=  "<tr style='background:#e5e5e5;'><td>\n";
     	$link = $linkTodos; 
     	$strResultado .= '<span><a href="'.SessaoSEI::getInstance()->assinarLink('/sei/controlador.php?acao='.$link.'&acao_origem=sei_numeros&qtd='.$_GET['qtde']).'"><img src ="modulos/mod-numeros-sei/imagens/mais.png" height="12"/>&nbsp; Ver todos...</a></span>';
       $strResultado .=  "</td><td></td></tr>";
