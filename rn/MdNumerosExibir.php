@@ -74,9 +74,6 @@ function pesquisar(){
 <?
 PaginaSEI::getInstance()->fecharJavaScript();
 
-/*echo '<script type="text/javascript" charset="iso-8859-1" src="modulos/mod-numeros-sei/js/moment.min.js?'.PaginaSEI::getInstance()->getNumVersao() . '"></script>';
-echo '<script type="text/javascript" charset="iso-8859-1" src="modulos/mod-numeros-sei/js/Chart.min.js?'.PaginaSEI::getInstance()->getNumVersao() . '"></script>';
-echo '<script type="text/javascript" charset="iso-8859-1" src="modulos/mod-numeros-sei/js/chartjs-plugin-labels.min.js?'.PaginaSEI::getInstance()->getNumVersao() . '"></script>';*/
 echo '<link href="modulos/mod-numeros-sei/css/main.css?'.PaginaSEI::getInstance()->getNumVersao() . '" rel="stylesheet" type="text/css" media="all" />';
 
 echo '<script src="modulos/mod-numeros-sei/js/highcharts.js?'.PaginaSEI::getInstance()->getNumVersao() . '"></script>';
@@ -110,18 +107,18 @@ $acessosInternos = $indicadores['quantidadeAcessosInternos'];
 $acessosExternos = $indicadores['quantidadeAcessosExternos'];
 //$extensoes = $indicadores['extensoes'];
 
-$tamanhoDB = $indicadores['tamanhoDatabase'];
+//$tamanhoDB = $indicadores['tamanhoDatabase'];
 $extensoes = $indicadores['extensoes'];
 $cpu = $indicadores['porcentagemCPU'];
 $memoria = $indicadores['quantidadeMemoria'];
 $discoUsado = $indicadores['espacoDiscoUsado'];
-//$soUsuarios = $indicadores['soUsuarios'];
 $acessosMes = $indicadores['acessosUsuariosMes'];
-//$navegadores = $indicadores['navegadores'];
 $acessosNavegadores = $indicadores['acessosNavegadores'];
-//$velocidades = $indicadores['velocidadeCidade'];
 $anexos = $indicadores['anexosTamanhos'];
 $acessosMes = $indicadores['acessosUsuariosMes'];
+//$soUsuarios = $indicadores['soUsuarios'];
+//$navegadores = $indicadores['navegadores'];
+//$velocidades = $indicadores['velocidadeCidade'];
 
 // acesso por navegadores 
 $arrNome = array();
@@ -304,11 +301,11 @@ $(function () {
           type: 'pie',
           name: 'Processos',
           data: [{
-					name: 'Internos',
+					name: 'Abertos',
 					y: <?php echo $quantProcedimentosAbertos; ?>
           	},
           	{
-          		name: 'Externos',
+          		name: 'Encerrados',
           		y: <?php echo $quantProcedimentos - $quantProcedimentosAbertos; ?>	
           	}						                                                         
 		    ],
@@ -774,8 +771,6 @@ gerarTabela($indicadores['quantidadeDocumentosUnidades'], 'Documentos por Unidad
 gerarTabela($indicadores['quantidadeAcessosUnidades'], 'Acessos por Unidade', 97, 'Unidade', 'Acessos', 'MdNumerosAcessosUnidades');
 
 gerarTabela($indicadores['quantidadeAcessosUsuarios'], 'Acessos por Usu&aacute;rios', 97, 'Usu&aacute;rios', 'Acessos', 'MdNumerosAcessosUsuarios', $dataColeta);
-
-//echo '<a href="'.SessaoSEI::getInstance()->assinarLink('/sei/controlador.php?acao=MdNumerosSistema&acao_origem=sei_numeros').'"><img src="modulos/mod-numeros-sei/imagens/stats.png" height="50" alt="SEI em N&uacute;meros" title="SEI em N&uacute;meros" /></a>';
 
 echo "</div>\n";  
 ?>
