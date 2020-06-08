@@ -770,7 +770,7 @@ gerarTabela($indicadores['quantidadeDocumentosUnidades'], 'Documentos por Unidad
 
 gerarTabela($indicadores['quantidadeAcessosUnidades'], 'Acessos por Unidade', 97, 'Unidade', 'Acessos', 'MdNumerosAcessosUnidades');
 
-gerarTabela($indicadores['quantidadeAcessosUsuarios'], 'Acessos por Usu&aacute;rios', 97, 'Usu&aacute;rios', 'Acessos', 'MdNumerosAcessosUsuarios', $dataColeta);
+//gerarTabela($indicadores['quantidadeAcessosUsuarios'], 'Acessos por Usu&aacute;rios', 97, 'Usu&aacute;rios', 'Acessos', 'MdNumerosAcessosUsuarios', $dataColeta);
 
 echo "</div>\n";  
 ?>
